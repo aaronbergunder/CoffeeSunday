@@ -2,7 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @user, :class => "button" %> 
 <%= link_to 'Back', users_path, :class => "button" %>
 
-<%= link_to 'Delete User', @user, :class => "button", method: :delete, data: { confirm: 'Are you sure?' } %>
+<span style="float: right"><%= link_to 'Delete User', @user, :class => "button", method: :delete, data: { confirm: 'Are you sure?' } %></span>

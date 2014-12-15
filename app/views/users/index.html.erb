@@ -1,23 +1,30 @@
 <div class="row">
-  <h1><strong>Coffee!</strong></h1>
+  <span style="text-align: center"><h2><strong>Coffee?</strong></h2>
+  <% @next_sunday = Date.new %>
+  <% @next_sunday = Time.now.end_of_week %>
+  <p>On Sunday, <%= @next_sunday.strftime("%B %d, %Y") %></p></span>
 </div>
 
+  <% helper.dateCheck %>
 
-<% @users.each do |user| %>
-  <div class="six columns">
-    <h5><%= user.name %></h5>
-    <%= user.attending %><br>
-    <% if user.email %>
-      <%= image_tag user.gravatar_url, :class => "thumbs" %>
-    <% else %>
-      Enter an email for avatar
+  <hr>
+  <h4><strong>Will be there:</strong></h4>
+  <% @users.each do |user| %>
+    <% if user.attending == true %>
+      <%= render 'list', :user => user %>
     <% end %>
-    <p><%= user.comment %></p>
-        <%= link_to 'Edit', edit_user_path(user), :class => "button button-primary" %>
-  </div><!-- user block -->
-
   <% end %>
 
+  <hr>
+  <h4><strong>Not this week:</strong></h4>
+
+  <% @users.each do |user| %>
+    <% if user.attending == false %>
+      <%= render 'list', :user => user %>
+    <% end %>
+  <% end %>
+
+<hr>
 <div class="row">
-  <%= link_to 'New User', new_user_path, :class => "button button-primary" %>
+  <%= link_to 'New User', new_user_path, :class => "button" %>
 </div>
