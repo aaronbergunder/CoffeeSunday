@@ -10,28 +10,25 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="row">
+    <div class="six columns">
+      Name: <%= f.text_field :name, :class => "u-full-width" %>
+    </div>
+    <div class="six columns">
+      Coming this sunday? <label><span class="label-body"><%= f.check_box :attending %></span></label>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :attending %><br>
-    <%= f.check_box :attending %>
+  <div class="twelve columns">
+    What's up? <%= f.text_field :comment, :class => "u-full-width" %>
   </div>
-  <div class="field">
-    <%= f.label :avatar %><br>
-    <%= f.text_field :avatar %>
+  <div class="row">
+    <div class="six columns">
+    Email: <%= f.email_field :email, :class => "u-full-width" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :comment %><br>
-    <%= f.text_field :comment %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
+<div class="row">
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'submit', :class => "button button-primary" %>
   </div>
+</div><!-- row -->
 <% end %>
