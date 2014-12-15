@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  attending: false
+  avatar: MyString
+  comment: MyString
+  email: MyString
+
+two:
+  name: MyString
+  attending: false
+  avatar: MyString
+  comment: MyString
+  email: MyString
