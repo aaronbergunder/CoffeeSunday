@@ -1,11 +1,10 @@
 <div class="row">
-  <span style="text-align: center"><h2><strong>Coffee?</strong></h2>
+  <div class="four columns offset-by-four"><span style="text-align: center"><%= image_tag "coffee.png", :class => "u-max-full-width" %>
   <% @next_sunday = Date.new %>
   <% @next_sunday = Time.now.end_of_week %>
-  <p>On Sunday, <%= @next_sunday.strftime("%B %d, %Y") %></p></span>
+  <p>On Sunday, <%= @next_sunday.strftime("%B %d, %Y") %></p></span></div>
 </div>
   
-  <% Sundays.dateCheck %>
 
   <hr>
   <h4><strong>Will be there:</strong></h4>

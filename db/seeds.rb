@@ -7,4 +7,3 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Sundays.new(today: Time.now, last_sunday: today.beginning_of_week, next_sunday: today.end_of_week)
