@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141215185656) do
+ActiveRecord::Schema.define(version: 20141216005803) do
+
+  create_table "sundays", force: true do |t|
+    t.datetime "last_sunday"
+    t.datetime "next_sunday"
+    t.datetime "today"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
